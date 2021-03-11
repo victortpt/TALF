@@ -1,5 +1,5 @@
 %{
-	int_num_lineas = 0, num_caracteres = 0;
+	int num_lineas = 0, num_caracteres = 0;
 %}
 
 %%
@@ -14,9 +14,9 @@ int yywrap()
 	return 1;
 }
 
-main()
+int main()
 {
 	yyin = fopen("entrada.txt","r");
 	while (yylex());
-	printf("No. lineas = %d, No. caracteres = %d\n", num_lines, num_caracteres);
+	printf("No. lineas = %d, No. caracteres = %d\n", num_lineas, num_caracteres);
 }
